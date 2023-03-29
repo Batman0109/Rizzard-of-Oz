@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
-
     Scene currentScene;
 
     void Start()
