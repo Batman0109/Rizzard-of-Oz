@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.Serialization.Formatters;
-using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -16,6 +14,8 @@ public class OpenPortal : MonoBehaviour
     {
         if (!hasInstantiated)
         {
+            FindObjectOfType<AudioManager>().Play("Portal");
+
             GameObject spawnedPortal = Instantiate(portal, spawnPoint.position, spawnPoint.rotation);
             spawnedPortal.transform.position = spawnPoint.position;
             hasInstantiated = true;
